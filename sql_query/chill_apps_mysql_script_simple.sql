@@ -1,12 +1,11 @@
 -- =============================================
 -- CHILL APPS DATABASE - Simple MySQL Script
 -- Movie Streaming Platform Database
--- Simple & Easy Import - Run Once!
 -- =============================================
 
-DROP DATABASE IF EXISTS chill_apps_db;
-CREATE DATABASE chill_apps_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE chill_apps_db;
+DROP DATABASE IF EXISTS chills_db;
+CREATE DATABASE chills_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE chills_db;
 
 -- =============================================
 -- CREATE TABLES
@@ -446,4 +445,4 @@ INSERT INTO content_badges (content_type, content_id, badge_type, badge_text, is
 -- =============================================
 SELECT 'Chill Apps Database created successfully! 🎉' AS status;
 SELECT 'All tables created with complete dummy data! 🚀' AS message;
-SELECT CONCAT('Total tables: ', COUNT(*)) AS table_count FROM information_schema.tables WHERE table_schema = 'chill_apps_db';
+SELECT CONCAT('Total tables: ', COUNT(*)) AS table_count FROM information_schema.tables WHERE table_schema = 'chills_db';
