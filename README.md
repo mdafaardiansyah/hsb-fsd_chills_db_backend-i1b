@@ -1,6 +1,6 @@
-# Mission Back End Advanced 1 B Harisenin Bootcamp FSD - Chill's Database
+# Mission Back End Intermediate 1 B Harisenin Bootcamp FSD - Chill's Database
 
-Repositori ini berisi setup MySQL menggunakan Docker Compose, beserta dua opsi untuk inisialisasi database: menggunakan SQL dump atau membuat dari nol dengan skrip SQL yang ditujukan untuk memenuhi **Mission Back End Advanced 1 B Hari Senin Bootcamp.**
+Repositori ini berisi setup MySQL menggunakan Docker Compose, beserta dua opsi untuk inisialisasi database: menggunakan SQL dump atau membuat dari nol dengan skrip SQL yang ditujukan untuk memenuhi **Mission Back End Intermediate 1 B Hari Senin Bootcamp.**
 
 ---
 
