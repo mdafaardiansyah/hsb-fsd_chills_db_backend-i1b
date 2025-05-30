@@ -1,4 +1,4 @@
-# chills_db-a1b
+# Mission Back End Advanced 1 B Harisenin Bootcamp FSD - Chill's Database
 
 Repositori ini berisi setup MySQL menggunakan Docker Compose, beserta dua opsi untuk inisialisasi database: menggunakan SQL dump atau membuat dari nol dengan skrip SQL yang ditujukan untuk memenuhi **Mission Back End Advanced 1 B Hari Senin Bootcamp.**
 
