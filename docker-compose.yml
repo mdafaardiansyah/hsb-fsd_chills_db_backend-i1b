@@ -1,0 +1,27 @@
+version: '3.9' # Gunakan versi compose file format terbaru
+name: chiils_db # Nama proyek, bisa diubah sesuai kebutuhan
+
+services:
+  db:
+    image: mysql:latest # Selalu gunakan tag spesifik di production, misal mysql:8.0
+    container_name: mysql_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} # Ambil dari .env file
+      MYSQL_DATABASE: ${MYSQL_DATABASE}         # Ambil dari .env file
+      MYSQL_USER: ${MYSQL_USER}                 # Ambil dari .env file
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}         # Ambil dari .env file
+    ports:
+      - '${MYSQL_PORT:-3306}:3306' # Mapping port ke host, default 3306 jika tidak diset di .env
+    volumes:
+      - mysql_data:/var/lib/mysql # Volume untuk persistensi data
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf # Opsional: untuk konfigurasi custom MySQL
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u${MYSQL_USER}", "-p${MYSQL_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s # Waktu tunggu sebelum healthcheck dimulai
+
+volumes:
+  mysql_data: # Definisi named volume
