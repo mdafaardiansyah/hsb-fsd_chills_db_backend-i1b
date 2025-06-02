@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.3.0, for Win64 (x86_64)
 --
--- Host: 153.92.5.249    Database: chills_db
+-- Host: xxx.xx.x.xx    Database: chills_db
 -- ------------------------------------------------------
 -- Server version	9.3.0
 
